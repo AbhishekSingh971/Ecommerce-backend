@@ -30,7 +30,8 @@ app.use('/api/v1/product', productRoute);
 
 //REST api
 app.use('*',function(req,res){
-    res.sendFile(path.join(__dirname, '../build/index.html'));
+    // res.sendFile(path.join(__dirname, '../build/index.html'));
+    res.send("hello");
 });
 
 // PORT
