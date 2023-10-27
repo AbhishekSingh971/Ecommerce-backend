@@ -19,9 +19,9 @@ const app = express();
 
 //middelwares
 var corsOptions = {
-    origin: 'https://ecommerce-frontend-five-omega.vercel.app/',
+    origin: 'https://ecommerce-frontend-five-omega.vercel.app',
     optionsSuccessStatus: 200,
-    AccessControlAllowOrigin: "https://ecommerce-frontend-five-omega.vercel.app/"
+    AccessControlAllowOrigin: "https://ecommerce-frontend-five-omega.vercel.app"
 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 app.use(express.json());
