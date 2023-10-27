@@ -18,10 +18,13 @@ connectDB();
 const app = express();
 
 //middelwares
-origin={"Access-Control-Allow-Origin": "https://https://ecommerce-backend-txxg.onrender.com"}
+var corsOptions = {
+    origin: 'http://example.com',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
 app.use(express.json());
 app.use(morgan('dev'));
-app.use(cors(origin));
+app.use(cors(corsOptions));
 app.use(express.static(path.join(__dirname, '../build')))
 
 //routes
