@@ -8,6 +8,7 @@ const connection_string = process.env.CONNECTION_STRING || "mongodb+srv://m001-s
 
 const connectDB = async()=>{
     try {
+        mongoose.set('strictQuery', false);
         const conn = await mongoose.connect(connection_string);
         console.log(`Connected To Database ${conn.connection.host}`.bgMagenta.white);
     } catch (error) {
