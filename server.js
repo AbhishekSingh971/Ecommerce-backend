@@ -18,9 +18,10 @@ connectDB();
 const app = express();
 
 //middelwares
+origin={"Access-Control-Allow-Origin": "https://https://ecommerce-backend-txxg.onrender.com"}
 app.use(express.json());
 app.use(morgan('dev'));
-app.use(cors())
+app.use(cors(origin));
 app.use(express.static(path.join(__dirname, '../build')))
 
 //routes
